@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @author sadatmalik
  */
 @RestController
-@RequestMapping(value="v1/organization")
+@RequestMapping(value="v1/organisation")
 public class OrganisationController {
 
     @Autowired
@@ -39,7 +39,7 @@ public class OrganisationController {
         return ResponseEntity.ok(service.create(organisation));
     }
 
-    @RequestMapping(value="/{organizationId}",method = RequestMethod.DELETE)
+    @RequestMapping(value="/{organisationId}",method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteOrganisation(
             @PathVariable("id") String id,
