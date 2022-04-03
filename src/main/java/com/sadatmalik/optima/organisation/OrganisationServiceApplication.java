@@ -12,6 +12,15 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Every time organisation data is added, updated, or deleted, the organisation service will
+ * publish a message to a Kafka topic, indicating that an organisation change event has occurred.
+ *
+ * The published message will include the organisation ID associated with the change event and
+ * what action occurred (add, update, or delete).
+ *
+ * @author sadatmalik
+ */
 @SpringBootApplication
 @RefreshScope
 @EnableEurekaClient
