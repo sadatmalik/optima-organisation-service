@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserContext {
     public static final String CORRELATION_ID  = "tmx-correlation-id";
-    public static final String AUTH_TOKEN      = "tmx-auth-token";
+    public static final String AUTH_TOKEN      = "Authorization";
     public static final String USER_ID         = "tmx-user-id";
     public static final String ORGANISATION_ID = "tmx-organisation-id";
 
@@ -54,11 +54,11 @@ public class UserContext {
         userId.set(aUser);
     }
 
-    public static String getOrgId() {
+    public static String getOrganisationId() {
         return orgId.get();
     }
 
-    public static void setOrgId(String aOrg) {
+    public static void setOrganisationId(String aOrg) {
         orgId.set(aOrg);
     }
 
